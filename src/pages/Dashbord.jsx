@@ -41,10 +41,11 @@ function  Dashbord()  {
     <div>
         <h2>Change</h2>
         {stocks.map((stock)=>{
-        const{change}=stock;
+        const{change, symbol}=stock;
+        let changeStyle={color:change<0 ? "red ": "green"}
         return( 
         
-            <h4>{change}</h4>
+            <h4  style={changeStyle} >{change}</h4>
           
            
         )
